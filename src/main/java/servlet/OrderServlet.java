@@ -58,7 +58,7 @@ public class OrderServlet extends HttpServlet {
                 resp.setContentType("application/xml");
                 OutputStream out = resp.getOutputStream();
                 XStream xStream = new XStream();
-                xStream.alias("person", Order.class);
+                xStream.alias("order", Order.class);
                 StringBuilder xml = new StringBuilder();
                 for (Order order : orderList){
                     xml.append(xStream.toXML(order));
